@@ -1,4 +1,4 @@
-package CaesarCipher;
+package LessonsTasks;
 
 
 public class CaesarCipher {

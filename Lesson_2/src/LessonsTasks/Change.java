@@ -1,4 +1,4 @@
-package CaesarCipher;
+package LessonsTasks;
 
 import java.util.Arrays;
 

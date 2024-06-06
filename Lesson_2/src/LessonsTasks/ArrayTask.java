@@ -1,4 +1,4 @@
-package CaesarCipher;
+package LessonsTasks;
 
 
 import java.util.Arrays;
@@ -8,7 +8,7 @@ public class ArrayTask {
     // максимального элемента;
 
     static int findMin(int[] a) { // returns the minimum value
-        System.out.print("returns the minimum value: ");
+//        System.out.print("returns the minimum value: ");
         int min = a[0];
         for (int i = 1; i < a.length; i++) {
             if (a[i] < min) {
@@ -18,8 +18,19 @@ public class ArrayTask {
         return min;
     }
 
+    static int findMax(int[] a) { // returns the minimum value
+//        System.out.print("returns the minimum value: ");
+        int max = a[0];
+        for (int i = 1; i < a.length; i++) {
+            if (a[i] > max) {
+                max = a[i];
+            }
+        }
+        return max;
+    }
+
     // Поиск индекса максимального значения
-    static int findMax(int[] a) { // returns the maximum index
+    static int findMaxIndex(int[] a) { // returns the maximum index
         System.out.print("returns the maximum index: ");
         int max = 0;
         for (int i = 1; i < a.length; i++) {
@@ -65,7 +76,7 @@ public class ArrayTask {
             for (int j = i + 1; j < a.length; j++) {
                 right += a[j];
             }
-            if (left == right){
+            if (left == right) {
 
                 return true;
             }
@@ -129,4 +140,37 @@ public class ArrayTask {
         System.out.println("Elapsed time: " + (endTime - startTime) + " milliseconds");
         return left == right;
     }
+
+// Написать функцию добавления элемента в конец массива таким образом, чтобы
+// она расширяла массив при необходимости.
+// Здесь нет смысла показывать не лучшее, но самое популярное решение, поэтому
+// можно продемонстрировать сразу вариант решения «со звёздочкой».
+// ∗1 Функция должна возвращать ссылку на вновь созданный внутри себя массив, а
+// не использовать глобальный
+
+    static int[] addToArray(int[] arr, int current, int value) {
+        System.out.println("Функция добавляет элемента в конец массива");
+        if (current == arr.length) {
+            int[] temp = new int[arr.length + 1];
+            System.arraycopy(arr, 0, temp, 0, arr.length);
+            arr = temp;
+        }
+        arr[current] = value;
+        return arr;
+    }
+
+    // Написать метод, возвращающий количество чётных элементов массива
+    static void countEvens(int[] arr) {
+        int counter = 0;
+        for (int i = 0; i < arr.length; ++i) {
+            if (arr[i] % 2 == 0) {
+                counter++;
+            }
+        }
+        System.out.println("Количество чётных элементов массива" + counter);
+    }
 }
+
+
+
+
