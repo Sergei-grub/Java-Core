@@ -122,22 +122,21 @@ public class ArrayTask {
         System.out.println("* Вариант со сложностью O(n)");
         long startTime = System.currentTimeMillis();
 
-        int lbound = 0;
-        int rbound = a.length - 1;
+        int lBound = 0;
+        int rBound = a.length - 1;
         int left = 0;
         int right = 0;
 
-        while (lbound <= rbound) {
+        while (lBound <= rBound) {
             if (left > right) {
-                right += a[rbound--];
-
+                right += a[rBound--];
             } else {
-                left += a[lbound++];
-
+                left += a[lBound++];
             }
         }
         long endTime = System.currentTimeMillis();
         System.out.println("Elapsed time: " + (endTime - startTime) + " milliseconds");
+
         return left == right;
     }
 
