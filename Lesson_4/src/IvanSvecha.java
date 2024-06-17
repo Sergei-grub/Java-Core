@@ -9,24 +9,8 @@ public class Ivan {
         Scanner input = new Scanner(System.in);
         System.out.print("Введите количество огарков, чтобы узнать сколько дней Иван будет жечь свечи: ");
         int number = input.nextInt();
-        String sday = null;
-        
-        final int svecha = 5;
-        int days = 0;
-
-        int res = number / 5;
-        int cinder = number - res * 5;
-
-        while (number > 0){
-            number = number - svecha;
-            if (number >= 0) days++;
-        }
-        res += cinder;
-        System.out.println("Осталось огарков: " + res);
-        System.out.println("Дней при свете: " + days);
-        days += res / 5;
-        System.out.println("Из остатков можно сделать еще свечей: " + res / 5);
-        
+        int days = number / 5;
+        days += (days + (number % 5)) / 5;
         System.out.printf("\nИван сможет жечь %d %s!", days, daysString(days));
     }
     static String daysString(int num){
