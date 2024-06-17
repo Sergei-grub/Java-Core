@@ -19,23 +19,27 @@ public class IvanSvecha {
         int cinder = 5;
         int days = 0;
 
-        int res = number / cinder;
+        int res = number / 25;
+
         System.out.println(res);
 
 //        do {
 //            number = number - cinder;
 //            days++;
-//            if (days == 5) days++;
+//            System.out.println(days);
+//            System.out.println(number);
 //        }
-//        while (number != 0);
-
-        for (int i =0; i <= res; i++){
+        while (number != 0){
+            number = number - cinder;
             days++;
-            if (days / 5 == 0) days++;
+            System.out.println(days);
+            System.out.println(number);
         }
 
 
-        System.out.printf("\nИван сможет жечь %d %s!", days, daysString(days));
+
+
+        System.out.printf("\nИван сможет жечь %d %s!", days + res, daysString(days));
 
 
 
