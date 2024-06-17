@@ -1,12 +1,8 @@
 import java.util.Scanner;
 
 
-public class IvanSvecha {
-
-
+public class Ivan {
     public static void main(String[] args) {
-
-
         System.out.println("Каждый день Иван тратит 1 свечу, которую он делает из огарков (остатки свечи).\n" +
                 "Одну свечу Иван делает из 5 огарков.");
         System.out.println(" - - - - - - - - - - - - - ");
@@ -14,35 +10,24 @@ public class IvanSvecha {
         System.out.print("Введите количество огарков, чтобы узнать сколько дней Иван будет жечь свечи: ");
         int number = input.nextInt();
         String sday = null;
-
-
-        int cinder = 5;
+        
+        final int svecha = 5;
         int days = 0;
 
-        int res = number / 25;
+        int res = number / 5;
+        int cinder = number - res * 5;
 
-        System.out.println(res);
-
-//        do {
-//            number = number - cinder;
-//            days++;
-//            System.out.println(days);
-//            System.out.println(number);
-//        }
-        while (number != 0){
-            number = number - cinder;
-            days++;
-            System.out.println(days);
-            System.out.println(number);
+        while (number > 0){
+            number = number - svecha;
+            if (number >= 0) days++;
         }
-
-
-
-
-        System.out.printf("\nИван сможет жечь %d %s!", days + res, daysString(days));
-
-
-
+        res += cinder;
+        System.out.println("Осталось огарков: " + res);
+        System.out.println("Дней при свете: " + days);
+        days += res / 5;
+        System.out.println("Из остатков можно сделать еще свечей: " + res / 5);
+        
+        System.out.printf("\nИван сможет жечь %d %s!", days, daysString(days));
     }
     static String daysString(int num){
         int preLastDigit = num % 100 / 10;
@@ -60,5 +45,4 @@ public class IvanSvecha {
                 return "дней";
         }
     }
-
 }
