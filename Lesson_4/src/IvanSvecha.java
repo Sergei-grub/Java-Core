@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class Ivan {
+public class IvanSvecha {
     public static void main(String[] args) {
         System.out.println("Каждый день Иван тратит 1 свечу, которую он делает из огарков (остатки свечи).\n" +
                 "Одну свечу Иван делает из 5 огарков.");
