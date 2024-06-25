@@ -38,7 +38,5 @@ public class Main {
         for (int n : array) {
             System.out.println(n);
         }
-
-
     }
 }
