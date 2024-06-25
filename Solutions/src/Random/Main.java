@@ -12,13 +12,13 @@ public class Main {
 
         System.out.println("Генератор случайных чисел методом \"nextInt:\"");
         for (int n : array) {
-            array[n] = random.nextInt(11);
+            n = random.nextInt(11);
             System.out.println(n);
 
         }
         System.out.println("Генератор случайных чисел методом \"Math.random()\":");
         for (int n : array) {
-            array[n] = (int) (Math.random() * (50 - 1));
+            n = (int) (Math.random() * (50 - 1));
             System.out.println(n);
 
         }
