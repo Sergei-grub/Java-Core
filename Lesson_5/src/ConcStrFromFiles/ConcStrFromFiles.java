@@ -91,7 +91,5 @@ public class ConcStrFromFiles {
 //        }
 //        concatenate("file_0.txt", "file_1.txt", "file_out.txt");
         System.out.println(isInFile("file_6.txt", "geekbrains"));
-
-
     }
 }
